@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box; 
+    /* 
+    É uma convenção para não levar em consideração um PADDING e MARGIM, quando estiver calculando a largura e altura dos ITENS 
+    */
+    margin: 0;
+    padding: 0; 
+}
+
+body{
+    background: #f5f7fa;   
+    height: 100vh;
+    width: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    height: 44px;
+    justify-content: space-around;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.navbar i{
+    color: #dadfe6;
+    font-size: 1.5rem;
+}
+
+.navbar i:nth-child(1){
+    color: #fe466d;
+}
+
+.photo-and-actions{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 44px);
+}
+
+.photo{
+    align-items: flex-end;
+    background: url('../img/girl.jpeg') center center/cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px 0 rgba(136, 136, 136, 0.77);   
+    color: #eee;
+    display: flex;
+    height: 85vh;
+    width: 98vw;
+}
+
+.photo-text{
+    padding: 15px;
+
+    background: rgb(2, 0, 36);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(35, 34, 65, 0) 0%,
+        rgba(0, 0, 0, 0.7) 52%
+    );
+    border-radius: 10px;
+    
+    /* REALIZA O DEGRADE */
+}
+
+.photo-name-age{
+    align-items: center;
+    display: flex;
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+}
+
+.bio{
+    line-height: 1.7rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.actions{
+    align-items: center;
+    display: flex;
+    flex: auto;
+    margin: 1rem 0;
+}
+
+.action {
+	align-items: center;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 2px 6px 0 rgba(112, 125, 134, 0.14);
+	display: flex;
+	font-size: 2rem;
+	height: 60px;
+	justify-content: center;
+	width: 60px;
+    transition: transform 500ms ease;
+}
+
+.action:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.actions .action:nth-child(1) {
+	color: #fd5068;
+}
+
+.actions .action:nth-child(2) {
+	color: #2db1ff;
+	font-size: 1.5rem;
+	height: 48px;
+	margin: 0 1rem;
+	width: 48px;
+}
+
+.actions .action:nth-child(3) {
+	color: #1be4a1;
+}
+
+@media (min-width: 1025px) {
+
+	.photo {
+		width: 367px;
+		height: 684px;
+	}
+
+	.actions {
+		flex: initial;
+	}
+
+	.photo-and-actions {
+		justify-content: center;
+	}
+
+	.navbar {
+		width: 400px;
+		margin: auto;
+	}
+
+}
